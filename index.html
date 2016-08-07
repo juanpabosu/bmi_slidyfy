@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Developing Data Products</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Developing Data Products">
+  <meta name="author" content="Juan Pablo Botero Suaza">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Developing Data Products</h1>
+    <h2>Body Mass Index Calculator</h2>
+    <p>Juan Pablo Botero Suaza<br/>Informatic Engineer</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Introduction</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>People&#39;s health and care have been one of the principal motivations for modern science in last years, as a result of this, several indicators have been created as tools for infering the state and patterns about human body characteristics like pressure levels, diseases, quality of vision, height, weight, breathing frequency, nutrition... . Indicators like body mass index (BMI) , which is presented here, it can help us determining acceptable levels of our body behavior with the objective of bringing a healthy lifestyle.   </p>
+
+<p>In the next slides will introduce some basic ideas of this interesting concept and finally present a practical exercise for calculating BMI: &quot;BMI calcultor Sniny App&quot;&quot;</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Body Mass Index</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Body Mass Index (BMI) is a simple index of weight-for-height that is commonly used to classify underweight, overweight and obesity in adults. It is defined as the weight in kilograms divided by the square of the height in metres (kg/m2).  </p>
+
+<table><thead>
+<tr>
+<th>Classification</th>
+<th>BMI Principal cut-off points</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Underweight</td>
+<td>\(<18.50\)</td>
+</tr>
+<tr>
+<td>Normal range</td>
+<td>\(18.50 - 24.99\)</td>
+</tr>
+<tr>
+<td>Overweight</td>
+<td>\(>=25.00\)</td>
+</tr>
+<tr>
+<td>Obese</td>
+<td>\(>=30.00\)</td>
+</tr>
+</tbody></table>
+
+<p><a href="http://apps.who.int/bmi/">World Health Organization</a><br>
+<br>
+BMI values are age-independent and the same for both sexes. However, BMI may not correspond to the same degree of fatness in different populations due, in part, to different body proportions. The health risks associated with increasing BMI are continuous and the interpretation of BMI gradings in relation to risk may differ for different populations.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Galton Data</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This data set will use for estimating child height from mid parent heigths with a R linear regression method (lm). The estimated child height will server as one input for calculating BMI introduced before.
+<a href="https://cran.r-project.org/web/packages/HistData/HistData.pdf">View doc here, page 17</a></p>
+
+<p><img src="assets/fig/simple-plot-1.png" title="plot of chunk simple-plot" alt="plot of chunk simple-plot" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>BMI Calculator Shiny App</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This sniny app calcualtes BMI of a child starting from de following value inputs:</p>
+
+<p>*Nickname: child name and last name / child name<br>
+*Gender: &#39;F&#39; or &#39;M&#39;<br>
+*Weight: child&#39;s height<br>
+*Mid parent heights: (father&#39;s height + mother&#39;s height)/2</p>
+
+<p>Body Mass Index: \(BMI= (weight / (height * height)) * 703\)  </p>
+
+<p>Additionally, the result shows the child classification accordance with estimated BMI: Underweight, Normal range, Overweight and Obese.  </p>
+
+<p>Go to calculator <a href="https://juanpaboxu.shinyapps.io/bmi_index/">https://juanpaboxu.shinyapps.io/bmi_index/</a>  </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Introduction'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Body Mass Index'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Galton Data'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='BMI Calculator Shiny App'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
