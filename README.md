@@ -1,1 +1,1 @@
- bmi_slidyfy
+ bmi_slidify
